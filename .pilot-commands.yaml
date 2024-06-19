@@ -1,0 +1,15 @@
+commands:
+- description: Generate PR Title & Description
+  name: pr-description
+  params:
+    cheap: false
+    code: false
+    debug: false
+    direct: false
+    file: prompts/generate-pr-description.md.jinja2
+    model: gpt-4o
+    quiet: true
+    snap: false
+    spinner: false
+    sync: false
+    wait: true
