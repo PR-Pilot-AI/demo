@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "game-of-life"
+version = "0.1.0"
+description = "A simple implementation of Conway's Game of Life"
+authors = [
+    { name = "Author Name", email = "author@example.com" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+numpy = "1.26.4"
+matplotlib = "3.8.3"
