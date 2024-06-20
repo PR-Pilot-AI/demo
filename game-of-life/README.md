@@ -1,4 +1,4 @@
-# Example: Game of Life
+# Demo: Game of Life
 In [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life), a grid of cells evolves over time based on a set of rules. The rules are simple, but the patterns that emerge can be complex and interesting.
 
 This example demonstrates how to create a simple implementation of Conway's Game of Life using PR Pilot:

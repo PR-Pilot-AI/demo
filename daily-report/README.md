@@ -1,27 +1,26 @@
-# Example: Daily Reports for Github Repositories
+# 📊 Demo: Daily Reports for Github Repositories
 
 Every developer has their routine in the morning:
-- See if there's any new issues on Github
-- Get an overview of currently unresolved bug tickets
-- Check the status of ongoing development efforts
+- 🐛 See if there's any new issues on Github
+- 🔍 Get an overview of currently unresolved bug tickets
+- 📊 Check the status of ongoing development efforts
 - etc
 
 With PR Pilot, you can automate the process of collecting and summarizing this information, creating a daily report that you can read in the morning to catch up on what happened yesterday.
 
-## How it works
+## 🛠️ How it works
 
 Running [run.sh](run.sh) will:
 
-1. **Collect Information**: PR Pilot gathers data from Github and other tools to summarize the day's activities from a list of Github repos
-2. **Generate Report**: Using a template, PR Pilot organizes the information into a structured report.
-3. **Deliver Report**: The report is saved as a Markdown file in `daily-reports/<OWNER>/<REPO>/<DATE>.md`
+1. **📥 Collect Information**: PR Pilot gathers data from Github and other tools to summarize the day's activities from a list of Github repos
+2. **📝 Generate Report**: Using a template, PR Pilot organizes the information into a structured report.
+3. **💾 Deliver Report**: The report is saved as a Markdown file in `daily-reports/<OWNER>/<REPO>/<DATE>.md`
 
-### Automation
+### 🤖 Automation
 
 Instead of running the script manually, you can run it as a [Github Action to generate daily reports](../.github/workflows/daily-report.yml) for your team.
 
-
-## Example Output
+## 📄 Example Output
 
 Running the script might look something like this:
 
@@ -43,12 +42,11 @@ so you can see what it looks like for some of our repositories:
 - [PR Pilot Demos Repository](PR-Pilot-AI/demo)
 - [PR Pilot Command-Line Interface](PR-Pilot-AI/pr-pilot)
 
-## Make it your own
+## 🎨 Make it your own
 This example is just a starting point. You can **customize the report template and the information collected** to suit your needs.
 
 Some ideas that might inspire you:
-- Add instructions to **summarize new Slack messages** from a specific channel
-- Include a section on **recently closed issues** to highlight progress
-- **Post the report to #daily-reports on Slack** for easy access
-- Add instructions to find **new Linear issues** created by your team
-
+- 📬 Add instructions to **summarize new Slack messages** from a specific channel
+- ✅ Include a section on **recently closed issues** to highlight progress
+- 📢 **Post the report to #daily-reports on Slack** for easy access
+- 🔍 Add instructions to find **new Linear issues** created by your team
