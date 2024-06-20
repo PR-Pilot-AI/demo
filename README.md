@@ -3,10 +3,10 @@
 </div>
 
 <p align="center">
-  <a href="https://github.com/apps/pr-pilot-ai/installations/new"><b>Install</b></a> |
-  <a href="https://docs.pr-pilot.ai">Documentation</a> | 
-  <a href="https://www.pr-pilot.ai/blog">Blog</a> | 
-  <a href="https://www.pr-pilot.ai">Website</a>
+  <a href="https://github.com/apps/pr-pilot-ai/installations/new"><b>🚀 Install 🚀</b></a> |
+  <a href="https://docs.pr-pilot.ai">📚 Documentation 📚</a> | 
+  <a href="https://www.pr-pilot.ai/blog">📝 Blog 📝</a> | 
+  <a href="https://www.pr-pilot.ai">🌐 Website 🌐</a>
 </p>
 
 # PR Pilot Demos
