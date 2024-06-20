@@ -1,0 +1,34 @@
+name: 📅 Daily Report
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  daily-report:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.10
+
+    - name: Install pr-pilot-cli
+      run: pip install pr-pilot-cli
+
+    - name: Run daily report script
+      run: |
+        cd daily-report
+        ./run.sh
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name "PR Pilot"
+        git config --global user.email "bot@pr-pilot.ai"
+        git add .
+        git commit -m "Daily Report $(date +'%Y-%m-%d')"
+        git push origin main
