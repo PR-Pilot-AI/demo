@@ -8,6 +8,6 @@ description = "A simple implementation of Conway's Game of Life"
 authors = ["Your Name <your.email@example.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = ">=3.9,<4.0"
 numpy = "^1.26.4"
 matplotlib = "^3.8.3"
