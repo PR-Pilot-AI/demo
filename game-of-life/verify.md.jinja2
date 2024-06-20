@@ -1,11 +1,12 @@
-Look at the following poetry output:
+Look at the following output of running poetry in `game-of-life/`:
 
 ```
-{{ sh('poetry lock && poetry install') }}
+{{ sh(['poetry', 'lock']) }}
+{{ sh(['poetry', 'install']) }}
 ```
 
-If everything looks OK, say "Poetry looks good to go!"
+If dependencies are installed successfully, say "Poetry looks good to go!"
 otherwise:
-1. Identify the parts of the code that are not working.
+1. Understand the error messages.
 2. Read the relevant files to get a better understanding of the problem.
-3. Fix the issue and respond with a shortpill, concise explanation of the errors and the changes you made
+3. Fix the issue and respond with a short, concise explanation of the errors and the changes you made
