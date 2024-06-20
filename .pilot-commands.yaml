@@ -8,8 +8,8 @@ commands:
     direct: false
     file: prompts/generate-pr-description.md.jinja2
     model: gpt-4o
-    quiet: true
     snap: false
     spinner: false
     sync: false
+    verbose: false
     wait: true
