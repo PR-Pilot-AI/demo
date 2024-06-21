@@ -9,11 +9,11 @@
   <a href="https://www.pr-pilot.ai">Website</a>
 </p>
 
-# PR Pilot Demos
+# 🚀 PR Pilot Demos
 
 This repository contains demos and examples for showcasing the capabilities of [PR Pilot](https://docs.pr-pilot.ai/user_guide.html).
 
-## How to Run
+## 🛠️ How to Run
 
 To run the demos:
 1. Make sure you have the **[CLI installed](https://github.com/PR-Pilot-AI/pr-pilot-cli)**
@@ -21,7 +21,7 @@ To run the demos:
 
 Then, you can run the demos by following the instructions in each demo's directory.
 
-## Demos
+## 🎬 Demos
 
 The following demos showcase how your can delegate routine work to PR Pilot with confidence and predictability,
 saving you time and helping you stay in the flow:
