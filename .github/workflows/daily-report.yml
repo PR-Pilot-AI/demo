@@ -2,7 +2,8 @@ name: 📅 Daily Report
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    # Run midnight PST
+    - cron: "0 8 * * *"
 
 jobs:
   daily-report:
