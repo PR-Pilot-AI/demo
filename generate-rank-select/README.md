@@ -1,19 +1,25 @@
-# 🚀 Demo: Content Generaion and Ranking with PR Pilot
+# 🚀 Demo: Content Generation and Ranking with PR Pilot
 
 In this experimental demo, we'll explore you can use PR Pilot in creative ways to 
 come up with new ideas, evaluate and rank these ideas and find the one that best fits your needs.
 
+
 ## 🎯 Goal
-This can be done with any goal in mind, but for this demo, we'll focus on **generating new interesting use cases for PR Pilot**. 
+This can be done with any goal in mind, but for this demo, we'll focus on **generating new interesting use cases for PR Pilot**.
+
+Our **quality criteria** are as follows:
+- It must make sense in the real world - no sci-fi ideas or hallucinations
+- Any developer reading the proposal should see the value in it
+- The proposal stays within the boundaries of what PR Pilot can do
 
 ## 🛠️ How it works
 
-Running [run.sh](run.sh) will:
+The achieve these quality criteria, the "generate-rank-select" approach helps you generate high quality content in the following way:
+- **Analyzing existing content**: By [analyzing existing demos](understand-existing-demo.md.jinja2), PR Pilot can understand what "high quality" means and provide new ideas that are in line with the existing content.
+- **Creating novelty with feedback**: By [feeding the existing proposals into the generator](https://github.com/PR-Pilot-AI/demo/blob/1eb9409eef5ff1929b8a2251ec19c48c7396f566/generate-rank-select/select-best-proposals.md.jinja2#L4C1-L5C73), you can generate new ideas that are both novel and useful.
+- **Ranking based on criteria**: Asking PR Pilot to [rank the proposals](https://github.com/PR-Pilot-AI/demo/blob/1eb9409eef5ff1929b8a2251ec19c48c7396f566/generate-rank-select/select-best-proposals.md.jinja2#L7) based on specific criteria allows you to quickly identify the most promising ideas and to weed out the less useful or realistic ones.
+- **Selecting the best**: By selecting the top 3 proposals, the end result of your script will always be the most relevant content for your needs - in our case, the most promising use cases for PR Pilot.
 
-1. **📂 Analyze Existing Demos**: PR Pilot will analyze the existing demos in the repository to understand the pain points they solve, how the PR Pilot CLI helps, and the main benefits for the user. The analysis will be saved in the [`analysis`](analysis) directory.
-2. **🔍 Search for Developer Problems**: PR Pilot will search the internet for specific problems that developers are facing and how they use LLMs to improve their daily workflows.
-3. **🧠 Propose New Use Cases**: Based on the existing demos and internet research, PR Pilot will generate new demo proposals and save them in the [`proposals`](proposals) directory.
-4. **🚦 Ranking the proposals**: Based on the criteria of LLM necessity, novelty, effort-to-gain ratio, and selecting the top 3 proposals is done in [select-best-proposals.md.jinja2](select-best-proposals.md.jinja2).
 
 ## 🚦 How to run
 
@@ -23,11 +29,21 @@ To generate new proposals:
 ./generate_proposals.sh
 ```
 
-To rank the proposals:
+This will:
+
+1. **📂 Analyze Existing Demos**: PR Pilot will analyze the existing demos in the repository to understand the pain points they solve, how the PR Pilot CLI helps, and the main benefits for the user. The analysis will be saved in the [`analysis`](analysis) directory.
+2. **🔍 Search for Developer Problems**: PR Pilot will search the internet for specific problems that developers are facing and how they use LLMs to improve their daily workflows.
+3. **🧠 Propose New Use Cases**: Based on the existing demos and internet research, PR Pilot will generate new demo proposals and save them in the [`proposals`](proposals) directory.
+
+You can then rank the proposals:
 
 ```bash
 ./select_best_proposals.sh
 ```
+
+4. **🚦 Ranking the proposals**: Based on the criteria of LLM necessity, novelty, effort-to-gain ratio, and selecting the top 3 proposals is done in [select-best-proposals.md.jinja2](select-best-proposals.md.jinja2).
+
+
 
 # 📄 Example Output
 
