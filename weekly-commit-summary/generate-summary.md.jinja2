@@ -1,0 +1,23 @@
+Collect the following information:
+- All commits made in the past week
+- Relate each commit to relevant Github issues
+
+Create a summary for the weekly update, so that the team can catch up on what happened in the past week.
+Use the following template to organize the content by topic and priority:
+
+(BEGIN TEMPLATE)
+
+# Weekly Commit Summary for <date>
+
+<one paragraph summary of the week>
+
+## Highlights
+<one or two things that seem extra important or urgent>
+
+## Commits
+{% for commit in commits %}
+- **{{ commit.message }}** ({{ commit.date }})
+  - Related Issues: {% for issue in commit.issues %} [{{ issue.title }}]({{ issue.url }}) {% endfor %}
+{% endfor %}
+
+(END TEMPLATE)
