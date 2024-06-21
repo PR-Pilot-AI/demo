@@ -27,13 +27,13 @@ jobs:
       run: pip install pr-pilot-cli
 
     - name: Run daily report script
+      env:
+        PR_PILOT_API_KEY: ${{ secrets.PR_PILOT_API_KEY }}
       run: |
         cd daily-report
         ./run.sh
 
     - name: Commit and push changes
-      env:
-        PR_PILOT_AP_KEY: ${{ secrets.PR_PILOT_API_KEY }}
       run: |
         git config --global user.name "PR Pilot"
         git config --global user.email "bot@pr-pilot.ai"
