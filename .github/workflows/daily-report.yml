@@ -13,6 +13,8 @@ on:
 jobs:
   daily-report:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Grants write permissions to the `GITHUB_TOKEN`
 
     steps:
     - name: Checkout repository
