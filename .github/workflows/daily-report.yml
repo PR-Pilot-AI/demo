@@ -3,11 +3,9 @@ name: 📅 Daily Report
 # Trigger only manually
 
 on:
-#  schedule:
-#    # Run midnight PST
-#    - cron: "0 8 * * *"
-  workflow_dispatch:
-    inputs: {}
+  schedule:
+    # Run midnight PST
+    - cron: "0 8 * * *"
 
 
 jobs:
