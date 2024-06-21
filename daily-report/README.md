@@ -42,6 +42,14 @@ so you can see what it looks like for some of our repositories:
 - [PR Pilot Demos Repository](PR-Pilot-AI/demo)
 - [PR Pilot Command-Line Interface](PR-Pilot-AI/pr-pilot)
 
+### Icing on the Cake: Daily Slack Digest
+You can take this approach to the next level by combining all the daily reports into a single daily digest and posting it to a specific channel. 
+This way, your team can catch up on everything that happened yesterday in one place.
+
+Here is what that looks like on Slack:
+
+![Daily Report in Slack](slack_screenshot.png)
+
 ## 🎨 Make it your own
 This example is just a starting point. You can **customize the report template and the information collected** to suit your needs.
 

@@ -1,0 +1,9 @@
+We generate daily reports for our Github repositories.
+
+{% for repo in ['pr-pilot', 'demo', 'pr-pilot-cli'] %}
+
+{{ sh(['cat', 'PR-Pilot-AI/' + repo + '.md']) }}
+
+{% endfor %}
+
+
