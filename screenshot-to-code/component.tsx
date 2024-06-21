@@ -1,30 +1,3 @@
-# Demo: 📸 Screenshot to Code
-
-When developing frontend applications, developers often need to convert a design mockup into code. This process can be time-consuming and error-prone, especially when the design is complex. In this demo, we will show how to use PR Pilot to convert a screenshot of a design mockup into HTML and CSS code.
-
-```shell
-# Generate REACT component based on screenshot content
-pilot --no-sync --verbose task --code --snap -o component.tsx -f generate-component.md.jinja2
-```
-
-## How it Works
-Here is what the command does:
-1. The `--snap` flag lets you select a portion of the screen to capture.
-2. The `--code` flag tells PR Pilot to output only the code, no other text
-3. The `-o component.tsx` parameter specifies the output file name.
-
-In the [generate-component.md.jinja2](generate-component.md.jinja2) template, we define
-what exactly we'd like to generate - in this case a React component.
-
-## Example
-
-Given the following screenshot:
-
-![Screenshot](screenshot.png)
-
-Running the command above will generate the following React component:
-
-```tsx
 import React from 'react';
 
 // Props for the GoToFile component
@@ -89,13 +62,3 @@ export default GoToFile;
 
   The component uses inline styles to closely match the appearance of the elements in the screenshot.
 */
-```
-
-## 🛠️ Customization
-
-You can customize the output by modifying the [generate-component.md.jinja2](generate-component.md.jinja2) template. The template uses Jinja2 syntax to define the structure of the generated code. You can modify the template to generate different types of components based on your requirements.
-Here are some ideas:
-
-- 🎨 Generate a component with different styles or layout.
-- 🔄 Use a different framework like Angular or Vue.js
-- 📚 Include instructions for using specific CSS classes or utility libraries.
