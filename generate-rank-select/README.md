@@ -29,33 +29,55 @@ To rank the proposals:
 ./select_best_proposals.sh
 ```
 
-## 📄 Example Output
+# 📄 Example Output
 
-Eventually, the script will generate a list of the top 3 proposals based on the selection criteria:
+### Top 3 Proposals for PR Pilot 🚀
 
-### 1. **Automated Issue Triage**
+#### 1. **Automated Issue Triage**
 **Explanation:**
-- **LLM Necessity:** This use case leverages natural language processing to analyze and categorize issues, which is not typically covered by existing tools.
-- **Novelty and WOW Effect:** Automating the triage process is innovative and can significantly reduce the manual effort required to manage issues.
-- **Effort-to-Gain Ratio:** The implementation effort is moderate, but the value it provides in terms of efficiency and organization is high.
+Automated Issue Triage stands out as the top proposal due to its high novelty and WOW effect. Managing and prioritizing issues is a common pain point for developers, and while there are tools that help
+with issue management, the integration of an LLM to analyze and categorize issues based on context and keywords is innovative. This use case leverages the power of natural language processing to
+understand the nuances of issue descriptions, making it a perfect fit for PR Pilot.
 
-### 2. **Automated Release Note Generation**
-**Explanation:**
-- **LLM Necessity:** Generating comprehensive release notes from commit messages and pull requests requires understanding and summarizing text, a task well-suited for LLMs.
-- **Novelty and WOW Effect:** Automating release note generation is a novel approach that can save developers a lot of time and ensure accuracy.
-- **Effort-to-Gain Ratio:** The effort to implement this is relatively low compared to the high value it provides in maintaining accurate and detailed release notes.
+**Example:**
+Imagine a repository receiving numerous issues daily. PR Pilot can scan new issues, identify whether they are bugs, feature requests, or questions, and apply relevant labels automatically. This not only
+saves time but also ensures that issues are categorized accurately, helping maintainers prioritize their work more effectively.
 
-### 3. **Automated Bug Reproduction Script Generation**
-**Explanation:**
-- **LLM Necessity:** Creating scripts to reproduce bugs based on issue descriptions and code snippets requires advanced understanding and synthesis of information, ideal for LLMs.
-- **Novelty and WOW Effect:** This is a highly innovative use case that can greatly enhance the bug-fixing process by providing developers with ready-to-use reproduction scripts.
-- **Effort-to-Gain Ratio:** While the implementation effort is higher, the potential gain in terms of speeding up the bug resolution process is substantial.
+#### 2. **Pull Request Conflict Detection**
+**Brief Explanation:**
+Pull Request Conflict Detection is highly valuable as it addresses a critical aspect of the development workflow. By automatically detecting potential merge conflicts between open pull requests, PR Pilot
+can help developers resolve conflicts early, reducing integration issues. This use case is both novel and provides a high-effort-to-gain ratio, as it streamlines the merge process and enhances
+collaboration.
 
-These proposals stand out for their innovative use of LLM capabilities, their potential to significantly improve developer workflows, and the high value they provide relative to the effort required to
-implement them.
+#### 3. **Automated Code Quality Reports**
+**Brief Explanation:**
+Automated Code Quality Reports offer significant value by integrating with existing code quality tools and generating detailed reports. This use case is essential for maintaining high code standards
+without manual effort. The novelty lies in the seamless integration and automation, making it a valuable addition to any development workflow.
+
+### Ranking of Remaining Proposals 📋
+
+4. Automated Security Vulnerability Scanning
+5. Automated Performance Benchmarking
+6. Automated Release Note Generation
+7. Automated Test Coverage Reports
+8. Automated Dependency License Checks
+9. Automated Environment Setup Scripts
+10. Automated API Documentation Generation
+11. Automated Code Comment Quality Check
+12. Automated Refactoring Suggestions
+13. Automated Dependency Conflict Resolution
+14. Automated Localization Updates
+15. Automated API Endpoint Testing
+16. Automated Dependency Update Notifications
+17. Code Review Summarization
+18. Automated Documentation Updates
+19. Bug Reproduction Script Generation
+20. Automated Changelog Generation
+
+By focusing on these top proposals, PR Pilot can showcase its capabilities in automating and enhancing various aspects of the development workflow, making it an indispensable tool for developers. 🌟
 
 
-## Customization Options
+# Make it your own!
 You can use this workflow to generate and rank proposals for any use case you have in mind. Simply adjust the search queries, selection criteria, and evaluation process to fit your specific needs.
 
 Here are some ideas for real-life projects:
