@@ -1,9 +1,14 @@
 name: 📅 Daily Report
 
+# Trigger only manually
+
 on:
-  schedule:
-    # Run midnight PST
-    - cron: "0 8 * * *"
+#  schedule:
+#    # Run midnight PST
+#    - cron: "0 8 * * *"
+  workflow_dispatch:
+    inputs: {}
+
 
 jobs:
   daily-report:
@@ -27,6 +32,8 @@ jobs:
         ./run.sh
 
     - name: Commit and push changes
+      env:
+        PR_PILOT_AP_KEY: ${{ secrets.PR_PILOT_API_KEY }}
       run: |
         git config --global user.name "PR Pilot"
         git config --global user.email "bot@pr-pilot.ai"
