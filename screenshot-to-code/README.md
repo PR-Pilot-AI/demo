@@ -1,4 +1,4 @@
-# Demo: 📸 Screenshot to Code
+# 📸 Screenshot to Code
 
 When developing frontend applications, developers often need to convert a design mockup into code. This process can be time-consuming and error-prone, especially when the design is complex. In this demo, we will show how to use PR Pilot to convert a screenshot of a design mockup into HTML and CSS code.
 
