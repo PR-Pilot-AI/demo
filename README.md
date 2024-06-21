@@ -26,10 +26,12 @@ Then, you can run the demos by following the instructions in each demo's directo
 The following demos showcase how your can delegate routine work to PR Pilot with confidence and predictability,
 saving you time and helping you stay in the flow:
 
-- 📝 **[Daily Reports for Github Repositories](daily-report)**: Automate the process of collecting and summarizing information from Github repositories.
-- 🎮 **[Game of Life with PR Pilot](game-of-life)**: Implement Conway's Game of Life with PR Pilot.
-- 📸 **[Screenshot to Code](screenshot-to-code)**: Convert a screenshot of something into a React component.
-- 🧪 **[Analyze unit test results](analyze-test-results)**: Analyze the output of unit tests, understand what caused them to fail and suggest fixes
-- 📦 **[Generate-Rank-Select](generate-rank-select)**: Use PR Pilot to generate new ideas, evaluate and rank them and find the best one for your needs.
+| Demo | Description |
+|------|-------------|
+| 📝 **[Daily Reports for Github Repositories](daily-report)** | Automate the process of collecting and summarizing information from Github repositories. |
+| 🎮 **[Game of Life with PR Pilot](game-of-life)** | Implement Conway's Game of Life with PR Pilot. |
+| 📸 **[Screenshot to Code](screenshot-to-code)** | Convert a screenshot of something into a React component. |
+| 🧪 **[Analyze unit test results](analyze-test-results)** | Analyze the output of unit tests, understand what caused them to fail and suggest fixes. |
+| 📦 **[Generate-Rank-Select](generate-rank-select)** | Use PR Pilot to generate new ideas, evaluate and rank them and find the best one for your needs. |
 
 Each directory contains a README with instructions on how to run the demo.
