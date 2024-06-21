@@ -24,7 +24,7 @@ jobs:
         python-version: '3.10'
 
     - name: Install pr-pilot-cli
-      run: pip install pr-pilot-cli
+      run: pip install --upgrade pr-pilot-cli
 
     - name: Run daily report script
       env:
@@ -41,4 +41,4 @@ jobs:
         git config --global user.email "bot@pr-pilot.ai"
         git add .
         git commit -m "Daily Report $(date +'%Y-%m-%d')"
-        git push origin main
+        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/PR-Pilot-AI/demo.git main
