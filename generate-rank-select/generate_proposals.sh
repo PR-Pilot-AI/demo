@@ -2,7 +2,7 @@
 set -e
 mkdir -p analysis
 # Analyze existing demos and save results in analysis/<demo>.md
-demo_dirs=("game-of-life" "daily-report")
+demo_dirs=("daily-report" "screenshot-to-code" "analyze-test-results")
 for demo_dir in "${demo_dirs[@]}"; do
 
   # Only run if file doesnt exist
@@ -14,5 +14,6 @@ for demo_dir in "${demo_dirs[@]}"; do
   DEMO_DIR=$demo_dir pilot --no-sync --verbose task -f understand-existing-demo.md.jinja2 -o "analysis/$demo_dir.md"
 done
 
-# Generate demo ideas
-pilot --no-sync --verbose task -f generate-demo.md.jinja2
+# Generate demo proposals
+date_time_str=$(date +'%Y-%m-%d-%H-%M-%S')
+pilot --no-sync --verbose task --code -o "proposals/$date_time_str.md" -f generate-demo-proposal.md.jinja2

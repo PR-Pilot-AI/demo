@@ -1,0 +1,47 @@
+I want you to imagine new PR Pilot use cases, based on the content of an existing ones.
+
+# Understand Existing Demos
+
+We have the following demos in the repository:
+
+{% for demo in ['analyze-test-results', 'screenshot-to-code', 'daily-report'] %}
+
+{{ sh(['cat', 'analysis/' + demo + '.md']) }}
+
+{% endfor %}
+
+# Problems developers are facing
+In an internet search, we found that developers are facing the following problems:
+
+{{ subtask('Search the internet for specific examples in which developers use LLMs to improve their daily workflows (git, github). Respond with a list of concrete examples (no headers)') }}
+
+# Imagine new use cases for PR Pilot
+The new use cases must meet the following criteria:
+- It must show case how to use the CLI to solve problems in a developer's daily workflow
+- It must solve a tangible problem that developers can relate to
+- The problem should be small and specific
+- The problem should not be easily solved with existing tools (e.g. dependency versions, linters, formatters, QA tools, etc.)
+
+# Boundaries and Limitations
+Make sure the use cases are within PR Pilot's capabilities:
+- Interact with Github issues, PRs, comments
+- Read/write files
+- Search the internet or scrape websites
+
+Do Not suggest use cases that are beyond the capabilities of the CLI.
+Stick to commands, parameters and syntax that you know from the existing demos.
+Here's the CLI help text:
+
+```shell
+{{ sh(['pilot', '--help']) }}
+```
+
+# Existing proposals
+We have already generated a number of potential use cases:
+
+{{ sh(['find', 'proposals', '-type', 'f', '-exec', 'cat', '{}', ';']) }}
+
+# Your Task
+1. Understand Existing Demos and developer problems
+2. Propose 5 _new_ use cases that meet the criteria above
+3. Respond with 1 paragraph for each new use case
