@@ -1,0 +1,27 @@
+Collect the following information:
+- All issues closed since the last release
+- All pull requests merged since the last release
+- A summary of the most important changes
+
+Create a release notes document for version {{ version }}.
+
+(BEGIN TEMPLATE)
+
+# Release Notes for {{ version }}
+
+<one paragraph summary of the release>
+
+## Closed Issues
+{% for issue in issues %}
+- [{{ issue.title }}]({{ issue.url }}) ({{ issue.number }})
+{% endfor %}
+
+## Merged Pull Requests
+{% for pr in pull_requests %}
+- [{{ pr.title }}]({{ pr.url }}) ({{ pr.number }})
+{% endfor %}
+
+## Summary of Changes
+<one or two paragraphs summarizing the most important changes>
+
+(END TEMPLATE)
