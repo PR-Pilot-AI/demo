@@ -1,4 +1,4 @@
-# Demo: 📚 Generate Dummy Content
+# 📚 Generate Dummy Content
 In this demo, we'll explore how you can use PR Pilot to generate dummy content for various purposes. This can be useful for testing, prototyping, or creating placeholder data for your projects.
 This content can be in various formats, such as SQL, CSV, JSON, or plain text, and can be used for a wide range of purposes.
 ## 🎯 Goal

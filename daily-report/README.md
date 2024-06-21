@@ -1,4 +1,4 @@
-# 📊 Demo: Daily Reports for Github Repositories
+# 📊 Daily Reports for Github Repositories
 
 Every developer has their routine in the morning:
 - 🐛 See if there's any new issues on Github

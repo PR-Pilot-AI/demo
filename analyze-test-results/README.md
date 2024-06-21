@@ -1,4 +1,4 @@
-# Demo: 🧪 Analyze and Fix Failed Unit Tests
+# 🧪 Analyze and Fix Failed Unit Tests
 
 Running automated tests and understanding the results is a crucial part of the software development process. 
 In this demo, we will show how PR Pilot can analyze the results of failed unit tests and suggest fixes to make the tests pass.

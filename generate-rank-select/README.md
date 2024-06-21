@@ -1,4 +1,4 @@
-# 🚀 Demo: Content Generation and Ranking with PR Pilot
+# 🚀 Content Generation and Ranking with PR Pilot
 
 In this experimental demo, we'll explore you can use PR Pilot in creative ways to 
 come up with new ideas, evaluate and rank these ideas and find the one that best fits your needs.
