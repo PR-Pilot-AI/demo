@@ -1,0 +1,14 @@
+We ran our unit tests, here's the output:
+
+---
+{{ sh('python3 test_fibonacci.py') }}
+---
+
+If the tests are green, do nothing. Otherwise:
+1. Analyze the test output and understand which code changes caused the tests to fail
+2. Respond with an analysis:
+   - Which tests failed, including Markdown links to the files
+   - Code snippets that show the changes that caused the tests to fail
+   - A suggestion for how to fix the code and/or tests
+
+Do not change anything, only respond with the analysis.
