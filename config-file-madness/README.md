@@ -12,13 +12,34 @@ When this is useful:
 
 ## 🎯 Goal
 
-The goal of this demo is to demonstrate how **easy** PR Pilot makes it to **generate new configuration files** based on the content of existing ones. This can save you **hours** of manual work and ensure that your new files are **consistent** with the existing ones. 
+The goal of this demo is to demonstrate how **easy** PR Pilot makes it to **generate new configuration files** based 
+on the content of existing ones. **This can save you hours** of manual work and ensure that your new files are **consistent** with the existing ones. 
 
 ## 🛠️ How it works
 
+All examples use the following CLI command:
+
+```shell
+pilot --no-sync --verbose task --code -f convert.md.jinja2
+```
+
+The important parts here are:
+- `--code`: Remove any chatter and backticks from the output
+- Use [covert.md.jinja2](convert.md.jinja2) as the template file
+
+The template file uses the following environment variables:
+- `CONVERT`: The input file(s) to convert
+- `TO`: Any instructions on how to convert the input file(s)
+
+At the end, each function uses the `-o` flag to save the output to a file.
+
 [run.sh](run.sh) contains a simple function for each use case:
 
-TODO Explain each use case and how it saves time/effort.
+- **generate_dockerfile**: This function generates a Dockerfile based on the `pyproject.toml` file. It creates a Dockerfile that runs the CLI by default and passes all arguments and parameters to it.
+- **generate_docker_compose**: This function generates a `docker-compose.yml` file using information from the `Makefile` and Kubernetes files. It sets up images, services, databases, environment variables, and volumes correctly.
+- **transfer_makefile_commands**: This function transfers Makefile commands into a new `pyproject.toml` file, integrating the build commands.
+- **generate_ci_cd_for_tests**: This function generates a GitHub Actions workflow for running tests based on the `pyproject.toml` file.
+- **generate_ci_cd_for_deploy**: This function generates a GitHub Actions workflow for building, pushing images, and deploying the app using information from the `Makefile` and `pyproject.toml`.
 
 ## 🚦 How to run
 
@@ -42,6 +63,7 @@ Running the script might look something like this:
 
 ## 🎨 Make it your own
 
-This example is just a starting point. You can **customize the configuration files and the information collected** to suit your needs.
+These are only a few examples of how you can use this technique. Here are some ideas how you can customize it for your project:
 
-TODO: Add customization options here.
+* Customize the templates to your project/language/framework 
+* Use different input files or formats
