@@ -1,0 +1,88 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pr-pilot-app
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: pr-pilot
+      tier: api
+  template:
+    metadata:
+      labels:
+        app: pr-pilot
+        tier: api
+    spec:
+      volumes:
+        - name: pem-volume
+          secret:
+            secretName: pr-pilot-private-key
+      serviceAccountName: pr-pilot-sa
+      initContainers:
+        - name: django-migrate
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          command: [ "python", "manage.py", "migrate" ]
+          env:
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: pr-pilot-db-postgresql
+                  key: postgres-password
+      containers:
+      - name: pr-pilot
+        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        imagePullPolicy: Always
+        volumeMounts:
+          - name: pem-volume
+            mountPath: /etc/ssl/certs/github_private_key.pem
+            subPath: github_app_private_key.pem
+        resources:
+          limits:
+            memory: "500Mi"
+            cpu: "1"
+          requests:
+            memory: "200Mi"
+            cpu: "0.2"
+        ports:
+        - containerPort: 8000
+        readinessProbe:
+          httpGet:
+            path: /healthz/
+            port: 8000
+          initialDelaySeconds: 5  # Delay before the first probe
+          periodSeconds: 10       # How often to perform the probe
+        livenessProbe:
+          httpGet:
+            path: /healthz/
+            port: 8000
+          initialDelaySeconds: 15  # Delay before the first probe to allow for application startup
+          periodSeconds: 20        # How often to perform the probe
+        env:
+        - name: GITHUB_APP_PRIVATE_KEY_PATH
+          value: "/etc/ssl/certs/github_private_key.pem"
+        - name: REDIS_HOST
+          value: "pr-pilot-redis-master.default.svc.cluster.local"
+        - name: JOB_STRATEGY
+          value: {{ .Values.jobStrategy }}
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: pr-pilot-db-postgresql
+              key: postgres-password
+        envFrom:
+        - secretRef:
+            name: pr-pilot-secret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pr-pilot-svc
+spec:
+  selector:
+    app: pr-pilot
+    tier: api
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8000

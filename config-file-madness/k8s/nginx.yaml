@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-static
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx-static
+  template:
+    metadata:
+      labels:
+        app: nginx-static
+    spec:
+      containers:
+      - name: nginx
+        image: {{ .Values.image.nginx }}:{{ .Values.image.tag }}
+        ports:
+        - containerPort: 80
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5  # Delay before the first probe
+          periodSeconds: 10       # How often to perform the probe
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 15  # Delay before the first probe to allow for application startup
+          periodSeconds: 20        # How often to perform the probe
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-static-svc
+spec:
+  type: ClusterIP
+  selector:
+    app: nginx-static
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80

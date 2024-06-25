@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pr-pilot-ingress
+  namespace: default
+  annotations:
+    networking.gke.io/managed-certificates: app-pr-pilot-certificate
+spec:
+  rules:
+  - host: app.pr-pilot.ai
+    http:
+      paths:
+      - path: /static/
+        pathType: Prefix
+        backend:
+          service:
+            name: nginx-static-svc
+            port:
+              number: 80
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: pr-pilot-svc
+            port:
+              number: 80

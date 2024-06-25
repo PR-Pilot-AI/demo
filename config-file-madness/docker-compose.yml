@@ -1,0 +1,104 @@
+version: '3.8'
+
+services:
+  pr-pilot-app:
+    image: us-west2-docker.pkg.dev/darwin-407004/pr-pilot/pr-pilot-app:${VERSION}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - GITHUB_APP_PRIVATE_KEY_PATH=/etc/ssl/certs/github_private_key.pem
+      - REDIS_HOST=pr-pilot-redis-master.default.svc.cluster.local
+      - JOB_STRATEGY=${JOB_STRATEGY}
+      - POSTGRES_PASSWORD_FILE=/run/secrets/postgres-password
+    secrets:
+      - postgres-password
+    volumes:
+      - pem-volume:/etc/ssl/certs/github_private_key.pem
+    ports:
+      - "8000:8000"
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          memory: 500M
+          cpus: '1.0'
+        reservations:
+          memory: 200M
+          cpus: '0.2'
+      restart_policy:
+        condition: on-failure
+
+  pr-pilot-worker:
+    image: us-west2-docker.pkg.dev/darwin-407004/pr-pilot/pr-pilot-worker:${VERSION}
+    build:
+      context: .
+      dockerfile: Dockerfile.worker
+    environment:
+      - GITHUB_APP_PRIVATE_KEY_PATH=/etc/ssl/certs/github_private_key.pem
+      - REDIS_HOST=pr-pilot-redis-master.default.svc.cluster.local
+      - POSTGRES_PASSWORD_FILE=/run/secrets/postgres-password
+    secrets:
+      - postgres-password
+    volumes:
+      - pem-volume:/etc/ssl/certs/github_private_key.pem
+      - repo-cache:/repo_cache
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: 500M
+          cpus: '1.0'
+        reservations:
+          memory: 200M
+          cpus: '0.2'
+      restart_policy:
+        condition: on-failure
+
+  nginx-static:
+    image: us-west2-docker.pkg.dev/darwin-407004/pr-pilot/pr-pilot-static:${VERSION}
+    build:
+      context: nginx
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: 500M
+          cpus: '1.0'
+        reservations:
+          memory: 200M
+          cpus: '0.2'
+      restart_policy:
+        condition: on-failure
+
+  pr-pilot-db:
+    image: postgres:latest
+    environment:
+      - POSTGRES_DB=pr_pilot
+      - POSTGRES_USER=pr_pilot
+    secrets:
+      - postgres-password
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  pr-pilot-redis:
+    image: redis:latest
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+
+volumes:
+  pem-volume:
+    driver: local
+  repo-cache:
+    driver: local
+  db-data:
+    driver: local
+
+secrets:
+  postgres-password:
+    file: ./secrets/postgres-password

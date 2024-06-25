@@ -1,0 +1,17 @@
+I want you to generate a configuration file based on the content of another file, but in a different format.
+
+Use the following content:
+
+
+{% for file_name in env('CONVERT').split(',') %}
+
+{{ file_name }}:
+```
+{{ sh(['cat', file_name]) }}
+```
+
+{% endfor %}
+
+The new config file should be:
+
+{{ env('TO') }}

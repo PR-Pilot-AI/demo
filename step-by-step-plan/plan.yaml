@@ -1,0 +1,37 @@
+name: Create a new PR Pilot Integration
+prompt: |
+  We are adding a Sentry integration to PR Pilot. Users will be able to enter their API key in the dashboard
+  and PR Pilot will use its agent tools to search the Sentry API for issues and events.
+  
+  An integration is composed of the following:
+  - A dashboard page with:
+    - An HTML template in `dashboard/templates/integrations/`
+    - A view controller in `dashboard/views/integrations.py`
+  - A Django model in `accounts/models.py` to store credentials
+  - A set of langchain agent tools in `agents/integration_tools/`
+steps:
+  - name: Create Django model
+    prompt: |
+      1. Add the Django model for storing the Sentry API key
+      2. Add a migration for the new model to `accounts/migrations/`
+  - name: Update dashboard template
+    prompt: |
+      The template currently contains no form and says "coming soon".
+      It should allow the user to enter their Sentry API key.
+      If an API key is already stored, it should show a delete button like in the example.
+      1. Read `dashboard/templates/integrations/slack.html` to understand how the template works
+      2. Update the `dashboard/templates/integrations/sentry.html` template to include a form for the API key
+  - name: Update view controller
+    prompt: Update the `IntegrationView` class in `dashboard/views/integrations.py` to handle the form submission.
+  - name: Create agent tools
+    prompt: |
+      1. Read `engine/agents/integration_tools/slack_tools.py` to understand how agent tools work
+      2. Implement Sentry agent tools in `engine/agents/integration_tools/sentry_tools.py`
+      3. Write unit tests for the new tools in `engine/agents/tests/test_sentry_tools.py`
+      4. Understand the tool registration mechanism in `engine/agents/integration_tools/__init__.py` and add the new tools
+  - name: Create PR title and description
+    prompt: |
+      1. Create a PR title that summarizes the changes
+      2. Write a PR description that explains the purpose of the integration and the changes made
+      3. Replace existing PR description and title with the new ones
+      4. Respond with a link to the PR and the branch name 
