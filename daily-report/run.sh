@@ -19,6 +19,7 @@ done
 # Combine all generated files into one
 for project in "${projects[@]}"; do
   cat "$project/$today.md" >> "$today.md"
+  echo -e "\n\n" >> "$today.md"
 done
 
 full_report_content=$(cat "$today.md")
