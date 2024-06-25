@@ -1,30 +1,23 @@
-FROM python:3.10-slim
+# Use an official Python runtime as a parent image
+FROM python:3.10
 
-# Set environment variables
-ENV POETRY_VERSION=1.11.11 \
-    POETRY_HOME="/opt/poetry" \
-    POETRY_VIRTUALENVS_CREATE=false \
-    POETRY_NO_INTERACTION=1
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the pyproject.toml and poetry.lock files to the container
+COPY pyproject.toml poetry.lock* /app/
+
+# Install Poetry
+RUN pip install poetry
 
 # Install dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    curl \
-    && curl -sSL https://install.python-poetry.org | python3 - \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
-
-# Add Poetry to PATH
-ENV PATH="$POETRY_HOME/bin:$PATH"
-
-# Copy project files
-WORKDIR /app
-COPY . /app
-
-# Install project dependencies
 RUN poetry install --no-root
 
-# Set the entrypoint to the CLI
-ENTRYPOINT ["pilot"]
+# Copy the rest of the application code to the container
+COPY . /app
 
-# Default command to display help
+# Set the entrypoint to the CLI script
+ENTRYPOINT ["poetry", "run", "pilot"]
+
+# Default command to run the CLI
 CMD ["--help"]

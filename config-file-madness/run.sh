@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
+PILOT_COMMAND="pilot --no-sync --verbose task --code -f convert.md.jinja2"
+
 generate_dockerfile() {
   # Generate a Dockerfile
   export CONVERT="pyproject.toml"   # Build file for Python projects
@@ -11,7 +13,7 @@ generate_dockerfile() {
 generate_docker_compose() {
   # Generate a docker-compose file
   k8s_files=$(ls k8s | sed 's/^/k8s\//' | tr '\n' ',' | sed 's/,$//')
-  export CONVERT="Makefile,$k8s_files"  # Use Makefile and Kubernetes resources as input
+  export CONVERT="Makefile,$k8s_files"  # Info about all our services, images, etc
   export TO="A docker-compose file, with my images from the registry"
   # Will have images, services, DBs, env vars and volumes setup correctly
   $PILOT_COMMAND -o docker-compose.yml
@@ -24,5 +26,19 @@ transfer_makefile_commands() {
   $PILOT_COMMAND -o pyproject.toml
 }
 
-# Run one of the examples
-generate_dockerfile
+generate_ci_cd_for_tests() {
+  # Generate a CI/CD pipeline for tests
+  export CONVERT="pyproject.toml"  # Contains info about the tests
+  export TO="A GitHub Actions workflow that runs the tests"
+  $PILOT_COMMAND -o .github/workflows/tests.yml
+}
+
+generate_ci_cd_for_deploy() {
+  # Generate a CI/CD pipeline for deployment
+  export CONVERT="Makefile,pyproject.toml"  # Knows how to build and deploy the app
+  export TO="A GitHub Actions workflow that builds/pushes the images and deploys the app"
+  $PILOT_COMMAND -o .github/workflows/deploy.yml
+}
+
+# Call one of the functions
+generate_ci_cd_for_deploy
