@@ -1,19 +1,56 @@
-# 🛠️ Config File Madness with PR Pilot
+# 🛠️ Config File Madness
 
-Welcome to the **Config File Madness** demo! 🎉 This demo showcases how PR Pilot can help you 
-**generate awesome configuration files in a snap**. We do that by using
-the information from your existing files to create new ones in a different format.
-
-When this is useful:
-- Your project needs a docker-compose setup
-- You want to switch from a Makefile to a proper build system (Maven, Gradle, Poetry, etc.)
-- Your project builds with shell scripts and you want to set up a CI/CD config (CircleCI, GitHub Actions, etc.)
-
+This demo showcases how PR Pilot can help you 
+**generate awesome configuration files in a snap**.
 
 ## 🎯 Goal
 
-The goal of this demo is to demonstrate how **easy** PR Pilot makes it to **generate new configuration files** based 
-on the content of existing ones. **This can save you hours** of manual work and ensure that your new files are **consistent** with the existing ones. 
+The goal of this demo is to demonstrate how **easy** PR Pilot makes it to **generate new configuration files** based
+on the content of existing ones. **This can save you hours** of manual work and ensure that your new files are **consistent** with the existing ones.
+
+## 💡 Use Cases
+This demo covers a few different use cases:
+
+### 🐳 Generate a Dockerfile
+**Creating a Dockerfile requires knowledge** of:
+- The language/framework to pick the right base image
+- Your application's dependencies and how to build it
+- How to configure and run your application 
+
+It's usually not something you do every day, so writing 
+a proper Dockerfile can be cumbersome.
+Luckily, all the information is usually available in your project already.
+
+**PR Pilot can learn from your build files** and generate a Dockerfile that:
+- Uses the right base image
+- Installs your application in the container
+- Does any necessary configuration
+- Sets all the right environment variables
+- Runs your application
+
+### 🐙 Generate a Docker Compose File
+Creating a `docker-compose.yml` file can be a bit of a hassle:
+- Setting the right images, ports, environment variables, and volumes
+- Linking services together
+- Defining databases and other services
+
+By using the information from your `Makefile` and Kubernetes files, you can generate a `docker-compose.yml` file that:
+- Sets up all the images and services
+- Defines databases and other services
+- Sets environment variables and volumes correctly
+
+**Instead of jumping back and forth** between files, the Docker documentation, and Stack Overflow, you can **generate** a `docker-compose.yml` file that works for your project in seconds.
+
+### 🚀 Generate CI/CD Pipelines / Workflows
+Nobody likes to write CI/CD configs. They're usually long, repetitive, and error-prone.
+By using the information from your `Makefile`, run scripts and other files, PR Pilot can **generate pipeline configs** that:
+- Run tests just **like in your scripts** 
+- Build and push images **correctly**
+- Set up **tokens and secrets** for the CI/CD environment
+- Deploy your app with **all bells and whistles**
+
+This way, you can focus on writing code and let PR Pilot handle the CI/CD setup for you.
+
 
 ## 🛠️ How it works
 
@@ -67,3 +104,4 @@ These are only a few examples of how you can use this technique. Here are some i
 
 * Customize the templates to your project/language/framework 
 * Use different input files or formats
+* Use PR Pilot to add another example: `pilot edit run.sh "Add a Maven example"`
