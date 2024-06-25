@@ -1,0 +1,68 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install poetry
+        poetry install
+
+    - name: Build static files
+      run: |
+        python manage.py collectstatic --no-input
+
+    - name: Build Docker images
+      run: |
+        VERSION=$(cat version.txt)
+        docker build --platform linux/amd64 -t pr-pilot-app:$VERSION .
+        docker build --platform linux/amd64 -t pr-pilot-worker:$VERSION -f Dockerfile.worker .
+        docker build --platform linux/amd64 -t pr-pilot-static:$VERSION -f nginx/Dockerfile nginx
+
+    - name: Push Docker images
+      env:
+        REGISTRY_URL: us-west2-docker.pkg.dev/darwin-407004/pr-pilot
+      run: |
+        VERSION=$(cat version.txt)
+        docker tag pr-pilot-app:$VERSION $REGISTRY_URL/pr-pilot-app:$VERSION
+        docker tag pr-pilot-app:$VERSION $REGISTRY_URL/pr-pilot-app:latest
+        docker push $REGISTRY_URL/pr-pilot-app:$VERSION
+        docker push $REGISTRY_URL/pr-pilot-app:latest
+        docker tag pr-pilot-worker:$VERSION $REGISTRY_URL/pr-pilot-worker:$VERSION
+        docker tag pr-pilot-worker:$VERSION $REGISTRY_URL/pr-pilot-worker:latest
+        docker push $REGISTRY_URL/pr-pilot-worker:$VERSION
+        docker push $REGISTRY_URL/pr-pilot-worker:latest
+        docker tag pr-pilot-static:$VERSION $REGISTRY_URL/pr-pilot-static:$VERSION
+        docker tag pr-pilot-static:$VERSION $REGISTRY_URL/pr-pilot-static:latest
+        docker push $REGISTRY_URL/pr-pilot-static:$VERSION
+        docker push $REGISTRY_URL/pr-pilot-static:latest
+
+    - name: Deploy to Kubernetes
+      run: |
+        VERSION=$(cat version.txt)
+        helm upgrade --install pr-pilot ./helm-chart --set image.tag=$VERSION
+
+    - name: Create Kubernetes secrets
+      run: |
+        kubectl delete secret pr-pilot-secret || true
+        kubectl create secret generic pr-pilot-secret --from-env-file=k8s.env
+
+    - name: Create private key secret
+      run: |
+        kubectl create secret generic pr-pilot-private-key --from-file=github_app_private_key.pem
