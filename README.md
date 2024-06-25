@@ -34,5 +34,6 @@ saving you time and helping you stay in the flow:
 | 🧪 **[Analyze unit test results](analyze-test-results)**     | Analyze the output of unit tests, understand what caused them to fail and suggest fixes.         |
 | 📦 **[Generate-Rank-Select](generate-rank-select)**          | Use PR Pilot to generate new ideas, evaluate and rank them and find the best one for your needs. |
 | 📚 **[Generate Dummy Content](generate-dummy-content)**      | Quick and flexible dummy content generation for testing purposes.                                |
+| 🛠 **[Config File Madness](config-file-madness)**              | Generate new configuration files based on the content of existing ones.                         |
 
 Each directory contains a README with instructions on how to run the demo.
