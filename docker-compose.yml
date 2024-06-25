@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  pr-pilot-cli:
+    image: python:3.10
+    container_name: pr-pilot-cli
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: ["poetry", "run", "pilot"]
+    environment:
+      - POETRY_VERSION=1.11.11
+    depends_on:
+      - redis
+    networks:
+      - pr-pilot-network
+
+  redis:
+    image: redis:alpine
+    container_name: redis
+    networks:
+      - pr-pilot-network
+
+networks:
+  pr-pilot-network:
+    driver: bridge
