@@ -36,7 +36,8 @@ The following demos showcase how you can delegate routine work to PR Pilot with 
 | 📝 **[Daily Reports](daily-report)**                    | Generate daily digests for Github, Linear, Slack and more!                               |
 | 📊 **[Multi-Search](multi-search)**                     | Run a search across services like Github, Slack, and your codebase.                      |
 | 📸 **[Screenshot to Code](screenshot-to-code)**         | Convert a screenshot of something into UI component in seconds.                          |
-| 🧪 **[Analyze test results](analyze-test-results)** | Analyze the output of unit tests, understand what caused them to fail and suggest fixes. |
+| 🧪 **[Analyze test results](analyze-test-results)**     | Analyze the output of unit tests, understand what caused them to fail and suggest fixes. |
+| 🎨 **[Style Guidelines](style-guidelines)**             | Extract style guidelines from different sources and apply them to your documents.        |
 | 🛠 **[Config File Madness](config-file-madness)**       | You'll never _ever_ write a single build file by hand ever again.                        |
 | 📦 **[Generate-Rank-Select](generate-rank-select)**     | Generate new ideas, evaluate and rank them and find the best one for your needs.         |
 | 📚 **[Generate Dummy Content](generate-dummy-content)** | Quick and flexible dummy content generation for testing purposes.                        |

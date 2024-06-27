@@ -98,14 +98,28 @@ commands:
     sync: false
     verbose: false
     wait: true
-- description: Extract style guidelines from a document
-  name: style-guidelines
+- description: Extract style guidelines from an online document
+  name: extract-style
   params:
     cheap: false
     code: true
     debug: false
     direct: false
     file: extract-guidelines.md.jinja2
+    model: gpt-4o
+    snap: false
+    spinner: true
+    sync: false
+    verbose: false
+    wait: true
+- description: Apply style guidelines to a local file
+  name: apply-style
+  params:
+    cheap: false
+    code: true
+    debug: false
+    direct: false
+    file: apply-guidelines.md.jinja2
     model: gpt-4o
     snap: false
     spinner: true
