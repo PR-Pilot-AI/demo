@@ -94,9 +94,10 @@ By focusing on these top proposals, PR Pilot can showcase its capabilities in au
 
 
 # Make it your own!
-You can use this workflow to generate and rank proposals for any use case you have in mind. Simply adjust the search queries, selection criteria, and evaluation process to fit your specific needs.
+You can use this workflow to generate and rank proposals for any use case you have in mind. 
+Simply adjust the search queries, selection criteria, and evaluation process to fit your specific needs.
 
-Here are some ideas for real-life projects:
+Here are some **ideas for real-life projects**:
 - **Feature Prioritization**: Use PR Pilot to analyze user feedback and generate feature proposals, then rank them based on user impact and development effort.
 - **Issue Analysis**: Automatically categorize and prioritize incoming issues based on their content and severity, then rank them for resolution.
 - **Layout Variations**: Generate and evaluate different layout designs for a website or application based on user preferences and usability metrics.

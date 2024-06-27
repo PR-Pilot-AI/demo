@@ -36,6 +36,9 @@ saving you time and helping you stay in the flow:
 | 📚 **[Generate Dummy Content](generate-dummy-content)**  | Quick and flexible dummy content generation for testing purposes.                        |
 | 🛠 **[Config File Madness](config-file-madness)**        | You'll never ever write a build file by hand ever again.                                 |
 | 📊 **[Multi-Search](multi-search)**                      | Run a search across services like Github, Slack, and your codebase.                      |
+| ⭐️ **[Generate PR Description & Title](pr-description)** | Generate consistent, high-quality PR descriptions in seconds                             |
+
+  
 
 Each directory contains a README with instructions on how to run the demo.
 
