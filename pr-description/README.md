@@ -24,14 +24,18 @@ It uses the `env('PR_NUMBER')` to ask you for the PR number when you run the com
 
 ```shell
 ➜  demo git:(main) pilot run pr-description
-> Pr number: 42
+> Pr number: 25
+╭─────────────────────────────────────────────────── Result ────────────────────────────────────────────────────╮
+│ Here is the updated PR #25 with the new title and description.                                                │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 ```
 
 ## Real-Life Examples
 
 We use this prompt in all of our repositories. Here are some real-life examples:
 
-- https://github.com/PR-Pilot-AI/pr-pilot-cli/pull/85
+- https://github.com/PR-Pilot-AI/demo/pull/25
 - https://github.com/PR-Pilot-AI/pr-pilot-cli/pull/82
+- https://github.com/PR-Pilot-AI/pr-pilot-cli/pull/81
 - https://github.com/PR-Pilot-AI/pr-pilot/pull/174
 - https://github.com/PR-Pilot-AI/pr-pilot/pull/173
