@@ -27,3 +27,60 @@ commands:
     sync: false
     verbose: false
     wait: true
+- description: Take a screenshot and generate a React component from it
+  name: react-component
+  params:
+    cheap: false
+    code: true
+    debug: false
+    direct: false
+    file: screenshot-to-code/generate-component.md.jinja2
+    model: gpt-4o
+    output: component.tsx
+    snap: true
+    spinner: true
+    sync: false
+    verbose: true
+    wait: true
+- description: Generate dummy content in any format for any purpose
+  name: dummy-content
+  params:
+    cheap: false
+    code: true
+    debug: false
+    direct: false
+    file: generate-dummy-content/generate-dummy-content.md.jinja2
+    model: gpt-4o
+    snap: false
+    spinner: true
+    sync: false
+    verbose: true
+    wait: true
+- description: Generate a config file based on existing files
+  name: cfg-file-conversion
+  params:
+    cheap: false
+    code: true
+    debug: false
+    direct: false
+    file: config-file-madness/convert.md.jinja2
+    model: gpt-4o
+    snap: false
+    spinner: true
+    sync: false
+    verbose: true
+    wait: true
+- description: Run the unit tests and analyze the output
+  name: test-analysis
+  params:
+    cheap: false
+    code: false
+    debug: false
+    direct: false
+    file: analyze-test-results/analyze-test-results.md.jinja2
+    model: gpt-4o
+    snap: false
+    spinner: true
+    sync: false
+    verbose: true
+    wait: true

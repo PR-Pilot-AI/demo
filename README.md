@@ -38,3 +38,34 @@ saving you time and helping you stay in the flow:
 | 📊 **[Multi-Search](multi-search)**                      | Run a search across services like Github, Slack, and your codebase.                      |
 
 Each directory contains a README with instructions on how to run the demo.
+
+## Quick Access
+
+Some of the demos are saved as commands in [.pilot-commands.yaml](.pilot-commands.yaml). You can 
+import them into your own repo with:
+
+```shell
+pilot grab commands pr-pilot-ai/demo
+```
+
+Then, you can run the demos with `pilot run <command>`:
+
+```shell
+Usage: pilot run [OPTIONS] COMMAND [ARGS]...
+
+  🚀 Run a saved command.
+
+  Create new commands by using the --save-command flag when running a task.
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  cfg-file-conversion  Generate a config file based on existing files
+  dummy-content        Generate dummy content in any format for any purpose
+  pr-description       Generate PR Title & Description
+  react-component      Take a screenshot and generate a React component...
+  search               Run a search query across Github issues, Slack...
+  test-analysis        Run the unit tests and analyze the output
+
+```
