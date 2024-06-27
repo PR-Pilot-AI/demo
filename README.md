@@ -35,5 +35,6 @@ saving you time and helping you stay in the flow:
 | 📦 **[Generate-Rank-Select](generate-rank-select)**      | Generate new ideas, evaluate and rank them and find the best one for your needs.         |
 | 📚 **[Generate Dummy Content](generate-dummy-content)**  | Quick and flexible dummy content generation for testing purposes.                        |
 | 🛠 **[Config File Madness](config-file-madness)**        | You'll never ever write a build file by hand ever again.                                 |
+| 📊 **[Multi-Search](multi-search)**                      | Run a search across services like Github, Slack, and your codebase.                      |
 
 Each directory contains a README with instructions on how to run the demo.

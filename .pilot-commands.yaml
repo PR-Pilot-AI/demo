@@ -13,3 +13,17 @@ commands:
     sync: false
     verbose: false
     wait: true
+- description: Run a search query across Github issues, Slack messages and code
+  name: search
+  params:
+    cheap: false
+    code: false
+    debug: false
+    direct: false
+    file: multi-search/search.md.jinja2
+    model: gpt-4o
+    snap: false
+    spinner: true
+    sync: false
+    verbose: false
+    wait: true
