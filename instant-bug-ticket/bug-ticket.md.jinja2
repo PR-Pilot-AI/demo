@@ -1,0 +1,9 @@
+Here are recent server logs:
+
+---
+{{ sh('kubectl logs --tail=60 statefulsets/pr-pilot-worker') }}
+---
+
+1. Identify any errors or stacktraces
+2. Read the relevant files to get a better understanding of the problem
+3. Open a new Github issue labeled 'bug' and a concise description of the problem

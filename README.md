@@ -32,6 +32,7 @@ The following demos showcase how you can delegate routine work to PR Pilot with 
 | Demo                                                    | Description                                                                              |
 |---------------------------------------------------------|------------------------------------------------------------------------------------------|
 | ⭐️ **[PR Descriptions](pr-description)**                | Create consistent, high-quality PR descriptions in seconds                               |
+| 🐞 **[Instant Bug Ticket](instant-bug-ticket)**         | Create bug tickets when and where they happen - instantly                                |
 | 📝 **[Daily Reports](daily-report)**                    | Generate daily digests for Github, Linear, Slack and more!                               |
 | 📊 **[Multi-Search](multi-search)**                     | Run a search across services like Github, Slack, and your codebase.                      |
 | 📸 **[Screenshot to Code](screenshot-to-code)**         | Convert a screenshot of something into UI component in seconds.                          |
@@ -41,7 +42,6 @@ The following demos showcase how you can delegate routine work to PR Pilot with 
 | 📚 **[Generate Dummy Content](generate-dummy-content)** | Quick and flexible dummy content generation for testing purposes.                        |
 | 🎮 **[Game of Life with PR Pilot](game-of-life)**       | Implement Conway's Game of Life with PR Pilot.                                           |
 
-  
 
 Each directory contains a README with instructions on how to run the demo.
 

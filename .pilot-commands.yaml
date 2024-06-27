@@ -84,3 +84,17 @@ commands:
     sync: false
     verbose: true
     wait: true
+- description: Read K8s logs, analyze code and create new bug ticket
+  name: bug-ticket
+  params:
+    cheap: false
+    code: false
+    debug: false
+    direct: false
+    file: instant-bug-ticket/bug-ticket.md.jinja2
+    model: gpt-4o
+    snap: false
+    spinner: true
+    sync: false
+    verbose: false
+    wait: true
