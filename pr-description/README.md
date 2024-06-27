@@ -14,7 +14,7 @@ The goal of this demo is to show how PR Pilot can help you generate high-quality
 This not only **saves you a lot of time**, but can **improve the quality and clarity of your PRs**, making the review process smoother and more efficient.
 
 ## 🛠️ How it works
-The prompt template in [pr-description.md.jinja2](pr-description.md.jinja2) defines rules and guidelines that the 
+The prompt template in [generate-pr-description.md.jinja2](generate-pr-description.md.jinja2) defines rules and guidelines that the 
 generated content needs to follow:
 - **Formatting**: emojis, bullet points, sections, headers, etc.
 - **Context**: related issues, tickets, etc.
