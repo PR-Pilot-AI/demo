@@ -27,7 +27,7 @@ Then, you can run the demos by following the instructions in each demo's directo
 
 ## Demos
 
-The following demos showcase how you can delegate routine work to PR Pilot with confidence and predictability:
+The following demos showcase how PR Pilot **solves common tasks developers have to do on a daily basis**:
 
 | Demo                                                    | Description                                                                              |
 |---------------------------------------------------------|------------------------------------------------------------------------------------------|
