@@ -1,4 +1,4 @@
-# Generate PR Description & Title
+# ⭐️ Generate PR Description & Title
 Creating **good** PR descriptions is essential for effective collaboration,
 but difficult in real life:
 - Collecting and linking relevant context (tickets, etc) is **tedious**
