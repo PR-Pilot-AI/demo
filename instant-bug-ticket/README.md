@@ -19,9 +19,9 @@ Here are recent server logs:
 {{ sh('kubectl logs --tail=60 statefulsets/pr-pilot-worker') }}
 ---
 
-1. 🕵️‍♂️ Identify any errors or stacktraces
-2. 📂 Read the relevant files to get a better understanding of the problem
-3. 🐞 Open a new Github issue labeled 'bug' and a concise description of the problem
+1. Identify any errors or stacktraces
+2. Read the relevant files to get a better understanding of the problem
+3. Open a new Github issue labeled 'bug' and a concise description of the problem
 ```
 
 Run the command, and PR Pilot will automatically create a new issue in your Github repository with the server logs and a concise description of the problem.
