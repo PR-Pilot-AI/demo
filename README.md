@@ -31,15 +31,15 @@ The following demos showcase how you can delegate routine work to PR Pilot with 
 
 | Demo                                                    | Description                                                                              |
 |---------------------------------------------------------|------------------------------------------------------------------------------------------|
+| ⭐️ **[PR Descriptions](pr-description)**                | Create consistent, high-quality PR descriptions in seconds                               |
 | 📝 **[Daily Reports](daily-report)**                    | Generate daily digests for Github, Linear, Slack and more!                               |
-| 🎮 **[Game of Life with PR Pilot](game-of-life)**       | Implement Conway's Game of Life with PR Pilot.                                           |
+| 📊 **[Multi-Search](multi-search)**                     | Run a search across services like Github, Slack, and your codebase.                      |
 | 📸 **[Screenshot to Code](screenshot-to-code)**         | Convert a screenshot of something into UI component in seconds.                          |
 | 🧪 **[Analyze test results](analyze-test-results)** | Analyze the output of unit tests, understand what caused them to fail and suggest fixes. |
+| 🛠 **[Config File Madness](config-file-madness)**       | You'll never _ever_ write a single build file by hand ever again.                        |
 | 📦 **[Generate-Rank-Select](generate-rank-select)**     | Generate new ideas, evaluate and rank them and find the best one for your needs.         |
 | 📚 **[Generate Dummy Content](generate-dummy-content)** | Quick and flexible dummy content generation for testing purposes.                        |
-| 🛠 **[Config File Madness](config-file-madness)**       | You'll never _ever_ write a single build file by hand ever again.                        |
-| 📊 **[Multi-Search](multi-search)**                     | Run a search across services like Github, Slack, and your codebase.                      |
-| ⭐️ **[PR Descriptions](pr-description)**                | Generate consistent, high-quality PR descriptions in seconds                             |
+| 🎮 **[Game of Life with PR Pilot](game-of-life)**       | Implement Conway's Game of Life with PR Pilot.                                           |
 
   
 
