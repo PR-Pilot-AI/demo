@@ -1,21 +1,20 @@
 We want to extract style guidelines from a document.
-The guidelines should be compact bullet points.
 
-## Guideline Example
-```markdown
-- Headers and list have emojis to make the content more engaging.
-- Prefer in-line links over lists / reference links
-- friendly, personal tone
-- key words / word groups are highlighted in bold, so that the reader can quickly scan the text
-```
+## Characteristics of good style guidelines
+- They are concise and to the point bullet points
+- They are specific and actionable.
+- They ONLY concern style and document structure, not content
+- Structure guidelines can include:
+  - position, size and alignment of logos
+  - Use of badges
+  - Conceptional structure of the document
+- Do NOT include names, paths, identifiers, versions, etc.
 
-## Document
+## Document URL
 
-{{ env('FILE_PATH') }}
-```
-{{ sh(['cat', env('FILE_PATH')]) }}
-```
+{{ env('URL') }}
 
 ## Instructions
 
-Generate a list of style guidelines from the document.
+1. Scrape the document URL
+2. Generate a list of style guidelines from the document.

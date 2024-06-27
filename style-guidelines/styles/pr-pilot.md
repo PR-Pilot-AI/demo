@@ -1,0 +1,8 @@
+- Use emojis in headers and lists to make the content more engaging.
+- Prefer in-line links over lists or reference links.
+- Maintain a friendly, personal tone throughout the document.
+- Highlight key words or word groups in **bold** to help readers quickly scan the text.
+- Ensure the README.md guides the user and explains the use case and benefits clearly.
+- Include a `README.md` and `run.sh` file in each demo directory.
+- Use Jinja templates in the same directory for dynamic content generation.
+- The `run.sh` file should use the CLI to implement the demo use case.
