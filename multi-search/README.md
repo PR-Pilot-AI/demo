@@ -1,11 +1,11 @@
 # 🔍 Multi-Search
-PR Pilot can act as your personal search agent. In this demo, you'll learn how 
-you can easily run a search across services like Github, Slack, and your codebase
+PR Pilot can act as **your personal search agent**. In this demo, you'll learn how 
+you can easily run a search **across services** like Github, Slack, and your codebase
 and get a beautifully formatted list of results.
 
 ## 🛠️ How it works
 
-In [multi-search.md.jinja2](multi-search.md.jinja2), you'll find the prompt:
+In [search.md.jinja2](search.md.jinja2), you'll find the prompt:
 
 ```markdown
 I want to search for "{{ env('SEARCH_QUERY') }}" across multiple sources.
@@ -16,7 +16,7 @@ I want to search for "{{ env('SEARCH_QUERY') }}" across multiple sources.
 4. 📋 Respond with a condensed list of links to the respective results.
 ```
 
-It's as easy as that! The run script will ask you for a search query, and then
+It's as easy as that! In the run script, **PR Pilot will ask you for a search query**, and then
 it will search across the specified sources and provide you with a condensed list:
 
 ```shell
