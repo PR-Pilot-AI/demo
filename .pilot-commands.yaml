@@ -11,7 +11,7 @@ commands:
     snap: false
     spinner: false
     sync: false
-    verbose: false
+    verbose: true
     wait: true
 - description: Run a search query across Github issues, Slack messages and code
   name: search
