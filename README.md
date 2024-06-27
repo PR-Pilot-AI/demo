@@ -1,3 +1,5 @@
+# 🌟 PR Pilot Demos
+
 <div align="center">
 <img src="https://avatars.githubusercontent.com/ml/17635?s=140&v=" width="100" alt="PR Pilot Logo">
 </div>
@@ -9,14 +11,14 @@
   <a href="https://www.pr-pilot.ai">Website</a>
 </p>
 
-# PR Pilot Demos
+## 🚀 Welcome to PR Pilot Demos
 
 This repository contains demos and examples for showcasing the capabilities of [PR Pilot](https://docs.pr-pilot.ai/user_guide.html) to help you:
 * **Save time** by automating routine tasks
 * **Stay in the flow** by delegating work to PR Pilot from [anywhere](https://docs.pr-pilot.ai/user_guide.html#python-sdk)
 * **Avoid context switching** by [integrating](https://docs.pr-pilot.ai/integrations.html) with your existing tools and services
 
-## How to Run
+## 🛠️ How to Run
 
 To run the demos:
 1. Make sure you have the **[CLI installed](https://github.com/PR-Pilot-AI/pr-pilot-cli)**
@@ -25,7 +27,7 @@ To run the demos:
 
 Then, you can run the demos by following the instructions in each demo's directory.
 
-## Demos
+## 📚 Demos
 
 The following demos showcase how you can delegate routine work to PR Pilot with confidence and predictability:
 
@@ -42,10 +44,9 @@ The following demos showcase how you can delegate routine work to PR Pilot with 
 | 📚 **[Generate Dummy Content](generate-dummy-content)** | Quick and flexible dummy content generation for testing purposes.                        |
 | 🎮 **[Game of Life with PR Pilot](game-of-life)**       | Implement Conway's Game of Life with PR Pilot.                                           |
 
-
 Each directory contains a README with instructions on how to run the demo.
 
-## Grab a Command
+## 💡 Grab a Command
 
 Some of the demo prompts are saved as [commands](https://docs.pr-pilot.ai/user_guide.html#sharing-and-importing-commands). You can 
 **easily transfer them into other repos** with a single command:
