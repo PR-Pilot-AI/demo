@@ -1,0 +1,21 @@
+We want to extract style guidelines from a document.
+The guidelines should be compact bullet points.
+
+## Guideline Example
+```markdown
+- Headers and list have emojis to make the content more engaging.
+- Prefer in-line links over lists / reference links
+- friendly, personal tone
+- key words / word groups are highlighted in bold, so that the reader can quickly scan the text
+```
+
+## Document
+
+{{ env('FILE_PATH') }}
+```
+{{ sh(['cat', env('FILE_PATH')]) }}
+```
+
+## Instructions
+
+Generate a list of style guidelines from the document.
