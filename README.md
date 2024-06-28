@@ -33,6 +33,7 @@ The following demos showcase how PR Pilot **solves common tasks developers have 
 |---------------------------------------------------------|------------------------------------------------------------------------------------------|
 | ⭐️ **[PR Descriptions](pr-description)**                | Create consistent, high-quality PR descriptions in seconds                               |
 | 🐞 **[Instant Bug Ticket](instant-bug-ticket)**         | Create bug tickets when and where they happen - instantly                                |
+| 💬 **[Conversations](conversation)**                    | Chat with PR Pilot, save conversations and share them with your team                     |
 | 📝 **[Daily Reports](daily-report)**                    | Generate daily digests for Github, Linear, Slack and more!                               |
 | 📊 **[Multi-Search](multi-search)**                     | Run a search across services like Github, Slack, and your codebase.                      |
 | 📸 **[Screenshot to Code](screenshot-to-code)**         | Convert a screenshot of something into UI component in seconds.                          |
