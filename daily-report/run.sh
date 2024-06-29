@@ -24,6 +24,8 @@ done
 
 full_report_content=$(cat "$today.md")
 prompt="We generated the following reports for today: $full_report_content. \
+Additionally, I want you to look up all Sentry issues for project python-django with filter is:unresolved and lastSeen:-24hrs. \
+See if you can correlate any of the issues with the reports. \
 Merge all reports along topics into a single, compact, daily digest and send it to #daily-reports on Slack. \
 Guidelines: \
 - Start with an executive summary
