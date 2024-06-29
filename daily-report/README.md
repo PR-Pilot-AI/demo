@@ -8,6 +8,10 @@ Every developer has their routine in the morning:
 
 With PR Pilot, you can automate the process of collecting and summarizing this information, creating a daily report that you can read in the morning to catch up on what happened yesterday.
 
+## Prerequisites
+- A Slack workspace to post the daily reports
+- Slack integration enabled in PR Pilot
+
 ## 🛠️ How it works
 
 Running [run.sh](run.sh) will:
