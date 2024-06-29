@@ -8,7 +8,7 @@ By integrating PR Pilot with Sentry, error analysis becomes a breeze.
 - Sentry integration enabled in PR Pilot
 
 ## 🛠️ How it works
-A convenient way to do this is to start a chat with PR Pilot:
+A convenient way to do this is to **start a chat** with PR Pilot:
 
 ```shell
 ➜  error-analysis git:(main) ✗ ./run.sh
@@ -52,7 +52,7 @@ A convenient way to do this is to start a chat with PR Pilot:
   For more details, you can visit the Sentry dashboard.                                                                         
 ```
 
-We found some issues, let's pick one and investigate further:
+We found some issues, **let's pick one and investigate** further:
 
 ```shell                                                                                                                                
 ╭───────────────── You ──────────────────╮
@@ -74,7 +74,7 @@ We found some issues, let's pick one and investigate further:
 
 ```
 
-Seems like there's something wrong with how we scrape websites. PR pilot can find and fix the relevant code:
+Seems like there's something wrong with how we scrape websites. PR pilot can **find and fix the relevant code**:
 
 ```shell
                                                                                                            
