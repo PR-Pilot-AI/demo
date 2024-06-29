@@ -19,7 +19,7 @@ This repository contains demos and examples for showcasing the capabilities of [
 ## How to Run
 
 To run the demos:
-1. Make sure you have the **[CLI installed](https://github.com/PR-Pilot-AI/pr-pilot-cli)**
+1. Make sure you have the **[CLI installed](https://github.com/PR-Pilot-AI/pr-pilot-cli)** and created an **[API key](https://app.pr-pilot.ai/dashboard/api-keys/)**
 2. **[Fork this repository](https://github.com/PR-Pilot-AI/demo/fork)**
 3. **[Invite PR Pilot](https://github.com/apps/pr-pilot-ai/installations/new)** to your forked repository
 
