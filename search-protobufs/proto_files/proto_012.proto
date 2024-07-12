@@ -1,0 +1,11 @@
+syntax = "proto3";
+package warehouse;
+
+message Maintenance {
+    int32 id = 1;
+    int32 component_id = 2;
+    string maintenance_date = 3;
+    string technician = 4;
+    string description = 5;
+    string status = 6;
+}

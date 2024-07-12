@@ -1,0 +1,11 @@
+syntax = "proto3";
+package warehouse;
+
+message Return {
+    int32 id = 1;
+    int32 order_id = 2;
+    int32 component_id = 3;
+    int32 quantity = 4;
+    string return_date = 5;
+    string reason = 6;
+}

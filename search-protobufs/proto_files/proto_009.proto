@@ -1,0 +1,11 @@
+syntax = "proto3";
+package warehouse;
+
+message PurchaseOrder {
+    int32 id = 1;
+    int32 supplier_id = 2;
+    string order_date = 3;
+    string delivery_date = 4;
+    float total_amount = 5;
+    string status = 6;
+}

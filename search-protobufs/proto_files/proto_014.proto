@@ -1,0 +1,11 @@
+syntax = "proto3";
+package warehouse;
+
+message Report {
+    int32 id = 1;
+    string report_date = 2;
+    string author = 3;
+    string title = 4;
+    string content = 5;
+    string status = 6;
+}

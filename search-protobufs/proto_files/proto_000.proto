@@ -1,0 +1,11 @@
+syntax = "proto3";
+package warehouse;
+
+message Component {
+    int32 id = 1;
+    string name = 2;
+    string manufacturer = 3;
+    string category = 4;
+    float price = 5;
+    int32 stock = 6;
+}

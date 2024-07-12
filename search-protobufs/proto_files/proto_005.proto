@@ -1,0 +1,11 @@
+syntax = "proto3";
+package warehouse;
+
+message Shipment {
+    int32 id = 1;
+    int32 order_id = 2;
+    string shipment_date = 3;
+    string delivery_date = 4;
+    string carrier = 5;
+    string tracking_number = 6;
+}

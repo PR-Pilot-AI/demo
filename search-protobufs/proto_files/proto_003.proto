@@ -1,0 +1,11 @@
+syntax = "proto3";
+package warehouse;
+
+message Customer {
+    int32 id = 1;
+    string name = 2;
+    string email = 3;
+    string phone = 4;
+    string address = 5;
+    string membership_level = 6;
+}
