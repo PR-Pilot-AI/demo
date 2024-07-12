@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+message Return {
+  string id = 1;
+  string order_id = 2;
+  string product_id = 3;
+  int32 quantity = 4;
+  string reason = 5;
+  string return_date = 6;
+  string status = 7;
+}
+

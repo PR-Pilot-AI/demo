@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+message Warehouse {
+  string id = 1;
+  string name = 2;
+  string address = 3;
+  string city = 4;
+  string state = 5;
+  string postal_code = 6;
+  string country = 7;
+  repeated string product_ids = 8;
+}
+

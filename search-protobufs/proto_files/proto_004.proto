@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+message Inventory {
+  string product_id = 1;
+  int32 quantity = 2;
+  string warehouse_location = 3;
+  string last_updated = 4;
+}
+

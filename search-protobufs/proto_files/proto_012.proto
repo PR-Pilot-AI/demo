@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+message SupplierRating {
+  string supplier_id = 1;
+  int32 rating = 2;
+  string comment = 3;
+  string rating_date = 4;
+}
+

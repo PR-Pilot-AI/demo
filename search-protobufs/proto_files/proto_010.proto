@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+message Discount {
+  string id = 1;
+  string code = 2;
+  string description = 3;
+  double percentage = 4;
+  string start_date = 5;
+  string end_date = 6;
+  repeated string applicable_product_ids = 7;
+}
+

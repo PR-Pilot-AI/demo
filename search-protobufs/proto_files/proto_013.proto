@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+message StockAlert {
+  string product_id = 1;
+  int32 threshold = 2;
+  string alert_date = 3;
+  bool is_resolved = 4;
+}
+

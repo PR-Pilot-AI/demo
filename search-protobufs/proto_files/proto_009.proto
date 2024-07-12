@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+message Payment {
+  string id = 1;
+  string order_id = 2;
+  string payment_date = 3;
+  string payment_method = 4;
+  double amount = 5;
+  string status = 6;
+}
+

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+message Supplier {
+  string id = 1;
+  string name = 2;
+  string contact_name = 3;
+  string contact_email = 4;
+  string contact_phone = 5;
+  string address = 6;
+  string city = 7;
+  string state = 8;
+  string postal_code = 9;
+  string country = 10;
+  repeated string product_ids = 11;
+}
+

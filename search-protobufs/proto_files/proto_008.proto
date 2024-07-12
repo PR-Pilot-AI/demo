@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+message Review {
+  string id = 1;
+  string product_id = 2;
+  string customer_id = 3;
+  int32 rating = 4;
+  string comment = 5;
+  string review_date = 6;
+}
+

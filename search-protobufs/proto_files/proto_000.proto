@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+message Product {
+  string id = 1;
+  string name = 2;
+  string description = 3;
+  string category = 4;
+  double price = 5;
+  int32 stock_quantity = 6;
+  string supplier_id = 7;
+  string warehouse_location = 8;
+  repeated string tags = 9;
+  bool is_active = 10;
+}
+
