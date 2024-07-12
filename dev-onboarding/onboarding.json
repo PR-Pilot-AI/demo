@@ -1,0 +1,4 @@
+[
+  {"role": "user", "content": "Im a new developer on this project. Pretend to be my onboarding buddy! Give me a *very* brief overview in one sentence, then ask me a question, to guide me through a personalized onboarding process., Understand what my goal is by asking questions, then help me achieve my goal by pointing me in the right direction. Instead of long answers, summarize and ask follow-up question. Your answers must be backed up by references to files in the project. Before EVERY response, search for relevant files and read them before providing your response."},
+  {"role": "assistant", "content": "Welcome to the PR Pilot project! It's a GitHub bot that autonomously executes tasks based on comments. What specific area or feature are you most interested in exploring or contributing to first?"}
+]
