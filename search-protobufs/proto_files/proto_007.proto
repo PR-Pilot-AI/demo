@@ -1,9 +1,11 @@
 syntax = "proto3";
+package warehouse;
 
-message Category {
-  string id = 1;
-  string name = 2;
-  string description = 3;
-  repeated string product_ids = 4;
+message Employee {
+    int32 id = 1;
+    string name = 2;
+    string position = 3;
+    string email = 4;
+    string phone = 5;
+    string hire_date = 6;
 }
-

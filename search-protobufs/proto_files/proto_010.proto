@@ -1,12 +1,11 @@
 syntax = "proto3";
+package warehouse;
 
-message Discount {
-  string id = 1;
-  string code = 2;
-  string description = 3;
-  double percentage = 4;
-  string start_date = 5;
-  string end_date = 6;
-  repeated string applicable_product_ids = 7;
+message Invoice {
+    int32 id = 1;
+    int32 order_id = 2;
+    float amount = 3;
+    string issue_date = 4;
+    string due_date = 5;
+    string status = 6;
 }
-

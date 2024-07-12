@@ -1,9 +1,11 @@
 syntax = "proto3";
+package warehouse;
 
-message StockAlert {
-  string product_id = 1;
-  int32 threshold = 2;
-  string alert_date = 3;
-  bool is_resolved = 4;
+message Audit {
+    int32 id = 1;
+    string audit_date = 2;
+    string auditor = 3;
+    string findings = 4;
+    string recommendations = 5;
+    string status = 6;
 }
-

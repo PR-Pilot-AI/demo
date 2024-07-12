@@ -1,11 +1,11 @@
 syntax = "proto3";
+package warehouse;
 
-message Review {
-  string id = 1;
-  string product_id = 2;
-  string customer_id = 3;
-  int32 rating = 4;
-  string comment = 5;
-  string review_date = 6;
+message Department {
+    int32 id = 1;
+    string name = 2;
+    string manager = 3;
+    string location = 4;
+    int32 employee_count = 5;
+    string contact_number = 6;
 }
-

@@ -1,16 +1,11 @@
 syntax = "proto3";
+package warehouse;
 
 message Customer {
-  string id = 1;
-  string first_name = 2;
-  string last_name = 3;
-  string email = 4;
-  string phone = 5;
-  string address = 6;
-  string city = 7;
-  string state = 8;
-  string postal_code = 9;
-  string country = 10;
-  repeated string order_ids = 11;
+    int32 id = 1;
+    string name = 2;
+    string email = 3;
+    string phone = 4;
+    string address = 5;
+    string membership_level = 6;
 }
-
