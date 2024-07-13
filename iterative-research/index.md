@@ -18,7 +18,11 @@ listing each file with a brief description.
 The **backlog** is a list of perspectives or angles that we plan to research next.
 
 ### File Index
-no files yet
+- [The Role of AI in Automating Routine Tasks](role-of-ai-in-automating-routine-tasks.md): This document explores how AI is being used to automate routine tasks, its efficiency gains, workforce implications, and future trends.
 
 ### Backlog
-empty backlog
+1. The role of AI in automating routine tasks
+2. AI's impact on job creation and destruction
+3. Ethical considerations in AI deployment in workplaces
+4. The future of AI-human collaboration
+5. AI in enhancing remote work and virtual collaboration
