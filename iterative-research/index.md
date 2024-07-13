@@ -14,7 +14,7 @@ What will be the impact of AI on the future of work?
 The knowledge base is a directory with markdown files.
 Each file represents a perspective or an angle on the question.
 The **file index** is a table of contents for the knowledge base,
-listing each file with a brief description.
+listing each file with a brief summary of the findings.
 The **backlog** is a list of perspectives or angles that we plan to research next.
 
 ### File Index
