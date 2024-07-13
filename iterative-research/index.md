@@ -23,9 +23,9 @@ The **backlog** is a list of perspectives or angles that we plan to research nex
 - [Ethical Considerations in AI Deployment in Workplaces](ethical-considerations-in-ai-deployment.md): This document discusses the ethical challenges and considerations in deploying AI in workplaces, including bias, privacy, transparency, and accountability.
 - [The Future of AI-Human Collaboration](future-of-ai-human-collaboration.md): This document explores various perspectives on how AI and humans can work together effectively, enhancing decision-making, creating new opportunities for skilled labor, and nurturing a collaborative culture.
 - [AI in Enhancing Remote Work and Virtual Collaboration](ai-in-enhancing-remote-work-and-virtual-collaboration.md): This document examines how AI is revolutionizing remote work and virtual collaboration by enhancing communication, improving productivity, supporting knowledge management, and ensuring security.
+- [AI's Role in Personalized Learning and Development](ai-role-in-personalized-learning-and-development.md): This document explores how AI is transforming personalized learning by tailoring educational experiences to individual student needs, enhancing engagement, and addressing ethical concerns.
 
 ### Backlog
-- AI's Role in Personalized Learning and Development
 - AI's Impact on Workplace Diversity and Inclusion
 - The Future of AI in Creative Industries
 - AI and Mental Health in the Workplace
