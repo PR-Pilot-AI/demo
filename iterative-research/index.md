@@ -20,12 +20,11 @@ The **backlog** is a list of perspectives or angles that we plan to research nex
 ### File Index
 - [The Role of AI in Automating Routine Tasks](role-of-ai-in-automating-routine-tasks.md): This document explores how AI is being used to automate routine tasks, its efficiency gains, workforce implications, and future trends.
 - [AI's Impact on Job Creation and Destruction](ai-impact-on-job-creation-and-destruction.md): This document examines the multifaceted impact of AI on job creation and destruction, including job displacement, new job opportunities, and policy implications.
+- [Ethical Considerations in AI Deployment in Workplaces](ethical-considerations-in-ai-deployment.md): This document discusses the ethical challenges and considerations in deploying AI in workplaces, including bias, privacy, transparency, and accountability.
 
 ### Backlog
-1. AI's impact on job creation and destruction
-2. Ethical considerations in AI deployment in workplaces
-3. The future of AI-human collaboration
-4. AI in enhancing remote work and virtual collaboration
+1. The future of AI-human collaboration
+2. AI in enhancing remote work and virtual collaboration
 
 ## Research Guidelines
 * Research MUST be backed by credible sources
