@@ -45,6 +45,7 @@ The following demos showcase how PR Pilot **solves common tasks developers have 
 | 📚 **[Generate Dummy Content](generate-dummy-content)** | Quick and flexible dummy content generation for testing purposes.                        |
 | 🎮 **[Game of Life with PR Pilot](game-of-life)**       | Implement Conway's Game of Life with PR Pilot.                                           |
 | 🌟 **[Search Protobufs](search-protobufs)**             | Perform semantic search over files in a repository, focusing on protobuf files.          |
+| 📚 **[Iterative Research](iterative-research)**         | Iteratively explore open-ended questions by building a knowledge base of Markdown files.  |
 
 Each directory contains a README with instructions on how to run the demo.
 
