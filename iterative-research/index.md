@@ -26,3 +26,9 @@ The **backlog** is a list of perspectives or angles that we plan to research nex
 3. Ethical considerations in AI deployment in workplaces
 4. The future of AI-human collaboration
 5. AI in enhancing remote work and virtual collaboration
+
+
+## Research Guidelines
+* Research MUST be backed by credible sources
+* Sources MUST be references in the knowledge base
+* Each perspective or angle SHOULD be concise, focused and put in the context of the question
